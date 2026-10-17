@@ -1,0 +1,247 @@
+
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #FFF9F7;
+    color: #6D2438;
+    line-height: 1.6;
+}
+
+/* Barra de Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #F8DDE8;
+    border-bottom: 1px solid #cbc0c0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #6D2438;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #B76E79;
+    margin: 0 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b5835a;
+}
+
+.cart-icon {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Sección Hero */
+.hero {
+    height: 70vh;
+    background-color: #F8DDE8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #6D2438;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #805563;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #B76E79;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #6D2438;
+}
+
+/* Sección de Productos */
+.products-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #FFF9F7;
+    padding: 25px;
+    border: 1px solid #F2D2DC;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(109,36,56,0.12);
+}
+
+.product-image {
+    background-color: #F8DDE8;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.product-card .category {
+    font-size: 12px;
+    color: #F8DDE8;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 15px;
+    font-weight: bold;
+    color: #b5835a;
+    margin-bottom: 15px;
+}
+
+.btn-cart {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #F2D2DC;
+    color: #F8DDE8;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-cart:hover {
+    background-color: #F2D2DC;
+    color: #fff;
+}
+
+/* Pie de Página */
+.footer {
+    background-color: #FFF9F7;
+    color: #C9A8B2;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+
+
+
+}
+
+/* Se activa hasta 720 píxeles */
+@media (max-width: 720px) {
+    .container {
+        width: min(100% - 32px, var(--container));
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .nav-wrap {
+        min-height: 68px;
+        flex-wrap: wrap;
+        gap: 0;
+        padding-block: 10px;
+    }
+
+    /* Ocultar navegación de escritorio */
+    .desktop-nav,
+    .desktop-cta {
+        display: none;
+    }
+
+    /* Mostrar acordeón móvil */
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 44px;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        color: var(--primary);
+        font-weight: 750;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    /* Ocultar marcador predeterminado del navegador */
+    .mobile-menu summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Símbolo cuando el menú está cerrado */
+    .mobile-menu summary::after {
+        content: "+";
+        font-size: 1.2rem;
+    }
+}
+
+
+
